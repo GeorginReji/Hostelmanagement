@@ -1,0 +1,19 @@
+﻿
+#footer1 {
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+.footerlinks {
+    color:white;
+    text-decoration: none !important
+}
+.footerlinks:hover{
+    color:white;
+}
+.navigation {
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+#navid {
+    margin-left: 500px;
+    color: #3d9fdd;
+    font-size: 19px;
+}

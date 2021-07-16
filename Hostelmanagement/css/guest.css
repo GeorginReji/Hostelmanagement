@@ -1,0 +1,7 @@
+﻿.fulldiv {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    background-image: linear-gradient(90deg, #fbfbfb 0%, #48f1e8 100%);
+    font-family: sans-serif;
+}

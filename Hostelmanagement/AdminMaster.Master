@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Hostelmanagement.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--table css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    
+    <%--j query--%>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Custom css--%>
+    <link href="css/styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-expand-lg ms-auto d-flex ">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="#!">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item text-white"><a class="nav-link text-white" href="#!">About</a></li>
+                        <li class="nav-item text-white"><a class="nav-link text-white" href="#!">Notifications</a></li>
+                        <li class="nav-item text-white"><a class="nav-link text-white" href="GuestHome.aspx">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+    </form>
+    <div class="bg-dark text-white">
+        <footer>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item ">
+                        <h3 class="text-white">Services</h3>
+                        <ul>
+                            <li><a class="text-white" href="#">Web design</a></li>
+                            <li><a class="text-white"href="#">Development</a></li>
+                            <li><a class="text-white" href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 class="text-white">About</h3>
+                        <ul>
+                            <li><a class="text-white" href="#">Company</a></li>
+                            <li><a class="text-white" href="#">Team</a></li>
+                            <li><a class="text-white" href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text text-white">
+                        <h3 class="text-white">Company Name</h3>
+                        <div>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</div>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="fab fa-instagram btn btn-outline-light btn-floating m-1"  role="button"></i></a><a href="#"><i class="fab fa-twitter btn btn-outline-light btn-floating m-1"></i></a><a href="#"><i class="fab fa-snapchat btn btn-outline-light btn-floating m-1"></i></a><a href="#"><i class="fab fa-facebook btn btn-outline-light btn-floating m-1"></i></a></div>
+                </div>
+               <div class="copyright">Company Name © 2018</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
