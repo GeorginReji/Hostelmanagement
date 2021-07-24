@@ -25,10 +25,25 @@
         <div class="header-content">
             <div class="container">
                 <div class="row">
+                    <br />
+                    <br />
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1><span class="turquoise">StartUp Landing</span> Page Template Free</h1>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</div>
+                            <h1><span class="turquoise "></span> Your second home in Bengaluru.</h1>
+                            <div>HMS are hitting the road and won't be taking any more bookings.
+
+                            But don’t worry, all current bookings are still valid and your booked hostel will be expecting you as normal.
+
+                            If you need to amend or cancel your booking, please contact the hostel directly, or the Hostelworld Customer Service team.</div>
+                            <br />
+                            <div>
+                                <i class="fas fa-bath"> Attached Bathroom</i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  <i class="fas fa-parking"> Parking Avilable</i>
+
+                            </div>
+                            <br />
+                            <div>
+                                <i class="fas fa-utensils">Food Provided</i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <i class="fas fa-wifi"> High-Speed WIFI </i>
+                            </div>
                         </div> <!-- end of text-container -->
                         <br />
                         <br />

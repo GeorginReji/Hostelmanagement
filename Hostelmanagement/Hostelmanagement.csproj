@@ -99,6 +99,7 @@
     <Content Include="css\swiper.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
+    <Content Include="FeedbackView.aspx" />
     <Content Include="fontawesome\attribution.js" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
@@ -1748,6 +1749,7 @@
     <Content Include="fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="foodmanagement.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="imgs\adminlogo.png" />
     <Content Include="imgs\attendencelogo.png" />
     <Content Include="imgs\bookinglogo.png" />
@@ -1766,6 +1768,7 @@
     <Content Include="imgs\ex-header-background.jpg" />
     <Content Include="imgs\favicon.png" />
     <Content Include="imgs\food.jpg" />
+    <Content Include="imgs\Foodsicoms.jpg" />
     <Content Include="imgs\header-background.jpg" />
     <Content Include="imgs\header-teamwork.svg" />
     <Content Include="imgs\hostel-icon.png" />
@@ -1774,6 +1777,7 @@
     <Content Include="imgs\logo.svg" />
     <Content Include="imgs\modelroom.jpg" />
     <Content Include="imgs\pooltable.jpg" />
+    <Content Include="imgs\profile-image-icon-8.png" />
     <Content Include="imgs\relax area.jpg" />
     <Content Include="imgs\rnt.png" />
     <Content Include="imgs\roomicon.jpg" />
@@ -1828,9 +1832,12 @@
     <Content Include="payment\Payment_booking.aspx" />
     <Content Include="Profilemanager.aspx" />
     <Content Include="Razorpaycheckout.aspx" />
-    <Content Include="Resetpwd.aspx" />
-    <Content Include="StudentProfile.aspx" />
+    <Content Include="RazorpayRent.aspx" />
+    <Content Include="Rentcallback.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="profileview.aspx" />
     <Content Include="userlogin.aspx" />
+    <Content Include="UsersView.aspx" />
     <Content Include="View_rqst.aspx" />
     <Content Include="Web.config" />
     <Content Include="GuestHome.aspx" />
@@ -1840,7 +1847,7 @@
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
     <Content Include="UserHome.aspx" />
-    <Content Include="forgotpwd.aspx" />
+    <Content Include="foodview.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Addroom.aspx.cs">
@@ -1892,12 +1899,26 @@
     <Compile Include="ComplaintBooking.aspx.designer.cs">
       <DependentUpon>ComplaintBooking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FeedbackView.aspx.cs">
+      <DependentUpon>FeedbackView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedbackView.aspx.designer.cs">
+      <DependentUpon>FeedbackView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="foodmanagement.aspx.cs">
       <DependentUpon>foodmanagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="foodmanagement.aspx.designer.cs">
       <DependentUpon>foodmanagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Leaveapplication.aspx.cs">
       <DependentUpon>Leaveapplication.aspx</DependentUpon>
@@ -1948,19 +1969,33 @@
     <Compile Include="Razorpaycheckout.aspx.designer.cs">
       <DependentUpon>Razorpaycheckout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Resetpwd.aspx.cs">
-      <DependentUpon>Resetpwd.aspx</DependentUpon>
+    <Compile Include="RazorpayRent.aspx.cs">
+      <DependentUpon>RazorpayRent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Resetpwd.aspx.designer.cs">
-      <DependentUpon>Resetpwd.aspx</DependentUpon>
+    <Compile Include="RazorpayRent.aspx.designer.cs">
+      <DependentUpon>RazorpayRent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentProfile.aspx.cs">
-      <DependentUpon>StudentProfile.aspx</DependentUpon>
+    <Compile Include="Rentcallback.aspx.cs">
+      <DependentUpon>Rentcallback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StudentProfile.aspx.designer.cs">
-      <DependentUpon>StudentProfile.aspx</DependentUpon>
+    <Compile Include="Rentcallback.aspx.designer.cs">
+      <DependentUpon>Rentcallback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profileview.aspx.cs">
+      <DependentUpon>profileview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profileview.aspx.designer.cs">
+      <DependentUpon>profileview.aspx</DependentUpon>
     </Compile>
     <Compile Include="user.Master.cs">
       <DependentUpon>user.Master</DependentUpon>
@@ -2012,12 +2047,12 @@
     <Compile Include="UserHome.aspx.designer.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="forgotpwd.aspx.cs">
-      <DependentUpon>forgotpwd.aspx</DependentUpon>
+    <Compile Include="UsersView.aspx.cs">
+      <DependentUpon>UsersView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="forgotpwd.aspx.designer.cs">
-      <DependentUpon>forgotpwd.aspx</DependentUpon>
+    <Compile Include="UsersView.aspx.designer.cs">
+      <DependentUpon>UsersView.aspx</DependentUpon>
     </Compile>
     <Compile Include="View_rqst.aspx.cs">
       <DependentUpon>View_rqst.aspx</DependentUpon>
@@ -2025,6 +2060,13 @@
     </Compile>
     <Compile Include="View_rqst.aspx.designer.cs">
       <DependentUpon>View_rqst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="foodview.aspx.cs">
+      <DependentUpon>foodview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="foodview.aspx.designer.cs">
+      <DependentUpon>foodview.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

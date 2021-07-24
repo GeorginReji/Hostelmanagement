@@ -116,7 +116,20 @@
                         </div>
                          <div class="row">
                             <div class="col">
-                                <asp:GridView class="table table-striped table-hover " ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-striped table-hover " ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                                    <Columns>
+                                        <asp:BoundField DataField="u_name" HeaderText="u_name" SortExpression="u_name" />
+                                        <asp:BoundField DataField="f_name" HeaderText="f_name" SortExpression="f_name" />
+                                        <asp:BoundField DataField="r_num" HeaderText="r_num" SortExpression="r_num" />
+                                        <asp:BoundField DataField="rp_date" HeaderText="rp_date" SortExpression="rp_date" />
+                                        <asp:BoundField DataField="rent" HeaderText="rent" SortExpression="rent" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [u_name], [f_name], [r_num], [rp_date], [rent] FROM [tbl_Rent] WHERE ([u_name] = @u_name)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="u_name" SessionField="Username" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </div>
                         </div>
 

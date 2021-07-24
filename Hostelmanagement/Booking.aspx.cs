@@ -155,13 +155,13 @@ namespace Hostelmanagement
                 SqlCommand cmd = new SqlCommand("INSERT INTO Register(fullname,age,gender,contactnum,email,parentname,parentnum,permanentaddress,roomtyp,username,password,accountstatus) values(@fullname,@age,@gender,@contactnum,@email,@parentname,@parentnum,@permanentaddress,@roomtyp,@username,@password,@accountstatus) ", con);
                 cmd.Parameters.AddWithValue("@fullname", txtfullname.Text);
                 cmd.Parameters.AddWithValue("@age", txtage.Text);
-                cmd.Parameters.AddWithValue("@gender", ddlgender.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@gender", ddlgender.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@contactnum", txtcnumber.Text);
                 cmd.Parameters.AddWithValue("@email", txtemail.Text);
                 cmd.Parameters.AddWithValue("@parentname", txtpname.Text);
                 cmd.Parameters.AddWithValue("@parentnum", txtpnum.Text);
                 cmd.Parameters.AddWithValue("@permanentaddress", txtpaddress.Text);
-                cmd.Parameters.AddWithValue("@roomtyp", ddlroomtyp.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@roomtyp", ddlroomtyp.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@username", txtusername.Text);
                 cmd.Parameters.AddWithValue("@password", txtpassword.Text);
                 cmd.Parameters.AddWithValue("@accountstatus", "Pending");

@@ -1,8 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userlogin.aspx.cs" Inherits="Hostelmanagement.login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="Hostelmanagement.ForgotPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+
+
+
+
+     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card">
@@ -17,7 +21,7 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                <h3> Member login </h3>
+                                <h3> Forgot Password </h3>
                                 </center>
                             </div>
 
@@ -30,20 +34,18 @@
                         </div>
                          <div class="row">
                             <div class="col">
-                                <label> Member ID</label>
+                                <label>Enter Regisred Email Id</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member Id"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Email Id"></asp:TextBox>
                                 </div>
                                 
-                                <label>Password</label>
-                                <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
-                            </div>
+                              
                                 <br />
                                  <div class="form-group ">
-                                     <asp:Button ID="Button1" class="btn btn-primary btn-block w-100 btn-lg" runat="server" Text="Log in" OnClick="Button1_Click" />
+                                     <asp:Button ID="Button1" class="btn btn-primary btn-block w-100 btn-lg" runat="server" Text="Submit" OnClick="Button1_Click" />
                                 </div>
                                 <br />
+                                <asp:Label ID="Label2" runat="server" Text="Your password reset link is send to your mail" Visible="False"></asp:Label>
                               
 
                         </div>
@@ -52,11 +54,11 @@
                 </div>
 
     </div>
-                <a href="adminlogin.aspx">Admin login</a> <br />
-                <a href="ForgotPassword.aspx">Forgot Password</a>
+                
 
     </div>
 
     </div>
         </div>
+
 </asp:Content>
