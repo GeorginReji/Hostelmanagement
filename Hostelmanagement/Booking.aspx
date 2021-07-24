@@ -22,22 +22,25 @@
                             </div>
 
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <hr>
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                </div>
                             </div>
-                        </div>
 
                          <div class="row">
                             <div class="col-md-5">
-                                <label>Full Name</label>
-                                <div class="form-group">
+                                <label>Full Name<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtfullname" Display="Dynamic" ErrorMessage="Can't be enpty" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtfullname" ErrorMessage="Enter only Charecters " ForeColor="Red" SetFocusOnError="True" ValidationExpression="[a-zA-Z]+"></asp:RegularExpressionValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtfullname" runat="server" placeholder="Full Name"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <label>Age</label>
-                                <div class="form-group">
+                                <label>Age<asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtage" ErrorMessage="Age not in range" ForeColor="Red" MaximumValue="60" MinimumValue="16" SetFocusOnError="True"></asp:RangeValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtage" runat="server" placeholder="Age" TextMode="Number"></asp:TextBox>
                             </div>
                             </div>
@@ -55,14 +58,14 @@
                          
                         <div class="row">
                            <div class="col-md-6">
-                                <label> Contact Number</label>
-                                <div class="form-group">
+                                <label> Contact Number</label>&nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtcnumber" runat="server" placeholder="Contact Number"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label>E-mail ID</label>
-                                <div class="form-group">
+                                <label>E-mail ID<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtemail" Display="Dynamic" ErrorMessage="Invalid Email Id" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtemail" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
                             </div>
                             </div>
@@ -70,22 +73,23 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <label> Parent Name</label>
-                                <div class="form-group">
+                                <label> Parent Name<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtpname" Display="Dynamic" ErrorMessage="Can't be enpty" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtpname" runat="server" placeholder="Parent Name"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label>Parent Number</label>
-                                <div class="form-group">
+                                <label>Parent Number</label>&nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtpnum" runat="server" placeholder="Parent Number" TextMode="Phone"></asp:TextBox>
                             </div>
                             </div>
                         </div>
                          <div class="row">
                             <div class="col">
-                                <label> Permanent Address</label>
-                                <div class="form-group">
+                                <label> Permanent Address<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtpaddress" Display="Dynamic" ErrorMessage="Can't be enpty" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtpaddress" runat="server" placeholder="Permanent Address" TextMode="MultiLine" Rows="2"></asp:TextBox>
                                 </div>
                             </div>
@@ -125,14 +129,16 @@
                         <br />
                         <div class="row">
                             <div class="col-md-6">
-                                <label>User name</label>
-                                <div class="form-group">
+                                <label>User name<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtfullname" Display="Dynamic" ErrorMessage="Can't be enpty" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtusername" runat="server" placeholder="New User Name"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label>Password</label>
-                                <div class="form-group">
+                                <label>Password<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtfullname" Display="Dynamic" ErrorMessage="Can't be enpty" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                </label>
+                                &nbsp;<div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txtpassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                             </div>
                             </div>

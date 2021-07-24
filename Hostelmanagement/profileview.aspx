@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="StudentProfile.aspx.cs" Inherits="Hostelmanagement.StudentProfile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user.Master" AutoEventWireup="true" CodeBehind="profileview.aspx.cs" Inherits="Hostelmanagement.StudentProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -66,13 +66,13 @@
                             <div class="col-md-6">
                                 <label> Room Type</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Room Type"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Room Type" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label>Room Number</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Room Number" TextMode="Phone"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Room Number" TextMode="Phone" ReadOnly="True"></asp:TextBox>
                             </div>
                             </div>
                         </div>
@@ -152,7 +152,21 @@
                         </div>
                          <div class="row">
                             <div class="col">
-                                <asp:GridView class="table table-striped table-hover " ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-striped table-hover " ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="aid" DataSourceID="SqlDataSource1">
+                                    <Columns>
+                                        <asp:BoundField DataField="aid" HeaderText="aid" InsertVisible="False" ReadOnly="True" SortExpression="aid" />
+                                        <asp:BoundField DataField="U_name" HeaderText="U_name" SortExpression="U_name" />
+                                        <asp:BoundField DataField="F_name" HeaderText="F_name" SortExpression="F_name" />
+                                        <asp:BoundField DataField="R_numb" HeaderText="R_numb" SortExpression="R_numb" />
+                                        <asp:BoundField DataField="A_date" HeaderText="A_date" SortExpression="A_date" />
+                                        <asp:BoundField DataField="attendence" HeaderText="attendence" SortExpression="attendence" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [tbl_attendence_rec] WHERE ([U_name] = @U_name)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="U_name" SessionField="Username" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
                             </div>
                         </div>
 

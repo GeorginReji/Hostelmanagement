@@ -28,13 +28,17 @@ namespace Hostelmanagement
             {
                 SqlCommand cmd = new SqlCommand("update Register set accountstatus ='Accept' where username= '" + row.Cells[0].Text + "'", con);
                 cmd.ExecuteNonQuery();
+                gridview1.DataBind();
+
                 
             }
             if (e.CommandName == "Reject")
             {
                 SqlCommand cmd = new SqlCommand("update Register set accountstatus ='Reject' where username= '" + row.Cells[0].Text + "'", con);
                 cmd.ExecuteNonQuery();
-                
+                gridview1.DataBind();
+
+
             }
         }
     }

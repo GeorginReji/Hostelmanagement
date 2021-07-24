@@ -59,6 +59,7 @@ namespace Hostelmanagement
             else
             {
                 adduser();
+                GridView1.DataBind();
             }
         }
 

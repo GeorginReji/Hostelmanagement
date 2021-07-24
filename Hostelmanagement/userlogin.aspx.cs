@@ -35,6 +35,9 @@ namespace Hostelmanagement
                         Session["fullname"] = dr.GetValue(1).ToString();
                         Session["role"] = "user";
                         Session["status"] = dr.GetValue(12).ToString();
+                        Session["Gmail"] = dr.GetValue(5).ToString();
+                        Session["contactnum"] = dr.GetValue(4).ToString();
+
 
 
 

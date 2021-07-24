@@ -95,7 +95,7 @@ namespace Hostelmanagement
                 con.Open();
 
 
-                SqlCommand cmd = new SqlCommand("SELECT *FROM tbl_rent where u_name='" + TextBox3.Text + "' AND MONTH(rp_date)= Month( '" + TextBox6.Text + "') ;", con);
+                SqlCommand cmd = new SqlCommand("SELECT *FROM tbl_Rent where u_name='" + TextBox3.Text + "' AND MONTH(rp_date)= Month( '" + TextBox5.Text + "') ;", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -120,26 +120,25 @@ namespace Hostelmanagement
         void addpayment()
         {
             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\georg\\source\\repos\\Hostelmanagement\\Hostelmanagement\\App_Data\\Hostel_db.mdf;Integrated Security=True");
-            con.Open();
             // Response.Write("<script>alert('testing');</script>");
             try
             {
 
+                con.Open();
 
+                //SqlCommand cmd = new SqlCommand("INSERT INTO tbl_Rent(u_name,f_name,r_typ,r_num,rp_date,rent) values(@username,@fullname,@roomtyp,@roomnum,,@rntdate,@rent) ", con);
+                //cmd.Parameters.AddWithValue("@username", TextBox3.Text);
+                //cmd.Parameters.AddWithValue("@fullname", TextBox4.Text);
+                //cmd.Parameters.AddWithValue("@roomtyp", TextBox1.Text);
+                //cmd.Parameters.AddWithValue("@roomnum", TextBox2.Text);
+                //cmd.Parameters.AddWithValue("@rntdate", TextBox5.Text);
+                //cmd.Parameters.AddWithValue("@rent", TextBox6.Text);
+                SqlCommand cmd = new SqlCommand("insert into tbl_Rent(u_name, f_name, r_typ, r_num, rp_date, rent) values('" + TextBox3.Text + "', '" + TextBox4.Text + "', '" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + TextBox5.Text + "', '" + TextBox6.Text +"')", con);
 
-
-
-                SqlCommand cmd = new SqlCommand("INSERT INTO payments(u_name,f_name,r_typ,r_num,rp_date,rent) values(@username,@fullname,@roomtyp,@roomnum,,@rntdate,@rent) ", con);
-                cmd.Parameters.AddWithValue("@username", TextBox3.Text);
-                cmd.Parameters.AddWithValue("@fullname", TextBox4.Text);
-                cmd.Parameters.AddWithValue("@roomtyp", TextBox1.Text);
-                cmd.Parameters.AddWithValue("@roomnum", TextBox2.Text);
-                cmd.Parameters.AddWithValue("@rntdate", TextBox5.Text);
-                cmd.Parameters.AddWithValue("@rent", TextBox6.Text);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Payment added');</script>");
+              //  Response.Write("<script>alert('Payment added');</script>");
 
 
             }
@@ -150,27 +149,26 @@ namespace Hostelmanagement
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
-            if (AlreadyPaid())
+            if(AlreadyPaid())
             {
-                Response.Write("<script>alert('Already paid ');</script>");
+                Response.Write("<script>alert('Payment Done');</script>");
             }
             else
             {
-                // Response.Redirect(String.Format("Razorpaycheckout.aspx?Uname={0}&Fname={1}&Date={2}&Cnum={3}&Email={4}&Roomtyp={5}&Total={8}",TextBox1.Text,TextBox4.Text,TextBox5.Text,txtcnumber,txtemail,ddlroomtyp,txttotal));
-
-                Session["Uname"] = TextBox3.Text;
-                Session["Fname"] = TextBox4.Text;
-                Session["Roomtyp"] = TextBox1.Text;
-
-                Session["rnum"] = TextBox2.Text;
-                Session["rdate"] = TextBox5.Text;
+                Session["u_name"] = TextBox3.Text;
+                Session["f_name"] = TextBox4.Text;
+                Session["rp_date"] = TextBox5.Text;
+               // Session["Cnum"] = txtcnumber.Text;
+                //Session["Email"] = txtemail.Text;
+                Session["r_typ"] = TextBox1.Text;
                 Session["rent"] = TextBox6.Text;
                 addpayment();
                 Response.Redirect("RazorpayRent.aspx");
-
-
-
-                }
+                GridView1.DataBind();
             }
+
+        }
     }
 }
+
+

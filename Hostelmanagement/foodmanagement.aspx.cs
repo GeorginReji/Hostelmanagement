@@ -52,6 +52,7 @@ namespace Hostelmanagement
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('item added');</script>");
+                GridView1.DataBind();
 
 
             }

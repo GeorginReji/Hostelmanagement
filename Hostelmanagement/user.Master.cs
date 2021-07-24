@@ -13,5 +13,11 @@ namespace Hostelmanagement
         {
 
         }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("profileview.aspx");
+
+        }
     }
 }
